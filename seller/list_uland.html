@@ -118,7 +118,7 @@
       </div>
 
       <!-- AREA -->
-      <div class="lf-section lf-section-shared">
+      <div class="lf-section">
         <div class="lf-section-head">
           <div class="lf-section-icon">📐</div>
           <div class="lf-section-title">Plot / Land Area</div>
@@ -150,7 +150,7 @@
       </div>
 
       <!-- PRICING -->
-      <div class="lf-section lf-section-shared">
+      <div class="lf-section">
         <div class="lf-section-head">
           <div class="lf-section-icon">💰</div>
           <div class="lf-section-title">Pricing</div>
@@ -191,7 +191,7 @@
       </div>
 
       <!-- MEDIA -->
-      <div class="lf-section lf-section-shared">
+      <div class="lf-section">
         <div class="lf-section-head">
           <div class="lf-section-icon">🖼</div>
           <div class="lf-section-title">Photos & Title Documents</div>
@@ -256,90 +256,12 @@
       'vacant-plot': {
         label: 'Vacant Plot', icon: '📍',
         fields: `
-      <div class="lf-field full">
-        <label class="lf-label">Plot Title <span class="req">*</span> <span class="hint">e.g. "600 sqft Residential Plot near Metro Station"</span></label>
-        <input class="lf-input" type="text" name="plot_title" placeholder="Enter a clear, descriptive title for this plot" required>
-      </div>
-
-      <div class="lf-field full">
-        <label class="lf-label">Sub-Category <span class="req">*</span> <span class="hint">Intended or permitted use</span></label>
-        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem;" id="subCatPicker">
-          <button type="button" class="lf-subtype-pill" onclick="toggleSubCat(this,'Residential')">🏠 Residential</button>
-          <button type="button" class="lf-subtype-pill" onclick="toggleSubCat(this,'Commercial')">🏢 Commercial</button>
-          <button type="button" class="lf-subtype-pill" onclick="toggleSubCat(this,'Agricultural')">🌾 Agricultural</button>
-          <button type="button" class="lf-subtype-pill" onclick="toggleSubCat(this,'Industrial')">⚙️ Industrial</button>
-        </div>
-        <input type="hidden" name="sub_category" id="subCatValue" required>
-      </div>
-
-      <div class="lf-field full">
-        <label class="lf-label">Plot Area <span class="req">*</span></label>
-        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:flex-start;">
-          <div class="lf-input-unit" style="flex:1;min-width:200px;">
-            <input class="lf-input" type="number" name="plot_area" id="plotAreaInput" placeholder="0" min="0" required oninput="handleAreaInput()">
-            <select class="lf-unit-select" name="plot_area_unit" id="plotAreaUnit" onchange="handleUnitChange()">
-              <option value="sqft">sq ft</option>
-              <option value="sqyard">sq yard</option>
-              <option value="bigha">Bigha</option>
-            </select>
-          </div>
-        </div>
-        <div id="bighaSubfields" style="display:none;margin-top:0.75rem;display:none;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
-            <div class="lf-field">
-              <label class="lf-label">Katha <span class="hint">(within the Bigha)</span></label>
-              <input class="lf-input" type="number" name="katha" id="kathaInput" placeholder="0" min="0" max="20">
-            </div>
-            <div class="lf-field">
-              <label class="lf-label">Lecha <span class="hint">(within the Katha)</span></label>
-              <input class="lf-input" type="number" name="lecha" id="lechaInput" placeholder="0" min="0" max="20">
-            </div>
-          </div>
-          <div style="margin-top:0.5rem;padding:0.5rem 0.75rem;background:var(--accent-light);border-radius:6px;font-size:0.78rem;color:var(--ink-light);">
-            ℹ️ 1 Bigha = 20 Katha &nbsp;·&nbsp; 1 Katha = 20 Lecha <span style="color:var(--muted)">(North/East India standard)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="lf-field">
-        <label class="lf-label">State <span class="req">*</span></label>
-        <select class="lf-select" id="stateSelectVP" name="vp_state" required>
-          <option value="">Select state</option>
-        </select>
-      </div>
-      <div class="lf-field">
-        <label class="lf-label">District <span class="req">*</span></label>
-        <select class="lf-select" id="districtSelectVP" name="vp_district" disabled required>
-          <option value="">Select district first</option>
-        </select>
-      </div>
-      <div class="lf-field">
-        <label class="lf-label">Locality / Area <span class="req">*</span></label>
-        <input class="lf-input" type="text" name="vp_locality" placeholder="e.g. Koramangala, Sector 12" required>
-      </div>
-      <div class="lf-field">
-        <label class="lf-label">Google Maps Link</label>
-        <input class="lf-input" type="url" name="vp_location_link" placeholder="Paste maps.google.com/… link">
-      </div>
-
-      <div class="lf-field full">
-        <label class="lf-label">Expected Price (₹) <span class="req">*</span></label>
-        <div class="lf-input-unit">
-          <span class="lf-unit-tag">₹</span>
-          <input class="lf-input" type="number" name="vp_price" placeholder="0" min="0" required>
-        </div>
-      </div>
-
-      <div class="lf-field full">
-        <label class="lf-label">Plot Images <span class="req">*</span> <span class="hint">Upload at least 3 clear photos of the plot</span></label>
-        <div class="lf-upload">
-          <input type="file" name="vp_images" accept="image/*" multiple>
-          <div class="lf-upload-icon">📷</div>
-          <div class="lf-upload-title">Click or drag to upload plot photos</div>
-          <div class="lf-upload-sub">JPG, PNG, WEBP — Boundary, entry & aerial shots recommended</div>
-          <div class="lf-upload-preview"></div>
-        </div>
-      </div>
+      <div class="lf-field"><label class="lf-label">Plot Shape <span class="req">*</span></label><select class="lf-select" name="plot_shape" required><option value="">Select</option><option>Rectangular</option><option>Square</option><option>Irregular</option><option>Trapezoidal</option></select></div>
+      <div class="lf-field"><label class="lf-label">Road Frontage <span class="req">*</span></label><input class="lf-input" type="number" name="road_frontage" min="0" placeholder="e.g. 30 (in feet)" required></div>
+      <div class="lf-field"><label class="lf-label">Zoning Classification <span class="req">*</span></label><select class="lf-select" name="zoning" required><option value="">Select</option><option>Residential</option><option>Commercial</option><option>Mixed-Use</option><option>Industrial</option><option>Agricultural</option></select></div>
+      <div class="lf-field"><label class="lf-label">Development Status</label><select class="lf-select" name="development_status"><option value="">Select</option><option>Ready for Construction</option><option>Requires Leveling</option><option>Needs Clearing</option><option>Partially Developed</option></select></div>
+      <div class="lf-field"><label class="lf-label">Boundary Wall</label><div class="lf-toggle"><input type="radio" name="boundary_wall" id="bw_y" value="Yes"><label for="bw_y">Yes</label><input type="radio" name="boundary_wall" id="bw_n" value="No" checked><label for="bw_n">No</label></div></div>
+      <div class="lf-field full"><label class="lf-label">Additional Details</label><textarea class="lf-textarea" name="additional_details" placeholder="Describe plot features, nearby amenities, development potential, any restrictions..."></textarea></div>
     `
       },
       'raw-land': {
@@ -358,7 +280,6 @@
       <div class="lf-field"><label class="lf-label">Distance from Water Body (meters)</label><input class="lf-input" type="number" name="distance_from_water" min="0" placeholder="e.g. 50"></div>
       <div class="lf-field"><label class="lf-label">Flood Risk <span class="hint">Admin will verify this</span></label><select class="lf-select" name="flood_risk"><option value="">Not assessed</option><option>Low Risk</option><option>Medium Risk</option><option>High Risk — Seasonal</option></select></div>
       <div class="lf-field"><label class="lf-label">Beachfront / Direct Access</label><div class="lf-toggle"><input type="radio" name="direct_access" id="da_y" value="Yes"><label for="da_y">Yes</label><input type="radio" name="direct_access" id="da_n" value="No" checked><label for="da_n">No</label></div></div>
-      <div class="lf-field full"><label class="lf-label">Additional Details</label><textarea class="lf-textarea" name="additional_details" placeholder="Describe water frontage length, access, views, permitted uses..."></textarea></div>
     `
       },
       'corner-piece': {
@@ -369,96 +290,35 @@
       <div class="lf-field"><label class="lf-label">Road Width — Side 2 (ft) <span class="req">*</span></label><input class="lf-input" type="number" name="road_width_2" min="0" placeholder="e.g. 30" required></div>
       <div class="lf-field"><label class="lf-label">Facing Direction (Main Road)</label><select class="lf-select" name="facing"><option value="">Select</option><option>East</option><option>West</option><option>North</option><option>South</option></select></div>
       <div class="lf-field"><label class="lf-label">Layout Approved</label><div class="lf-toggle"><input type="radio" name="layout_approved" id="cp_la_y" value="Yes"><label for="cp_la_y">Yes</label><input type="radio" name="layout_approved" id="cp_la_n" value="No" checked><label for="cp_la_n">No</label></div></div>
-      <div class="lf-field full"><label class="lf-label">Additional Notes</label><textarea class="lf-textarea" name="notes" placeholder="Describe dual road advantage, neighbourhood, nearby landmarks..."></textarea></div>
     `
       }
     };
 
-    // ── Vacant Plot helpers ──────────────────────────────────────────
-
-    function toggleSubCat(btn, value) {
-      // Single-select behaviour
-      document.querySelectorAll('#subCatPicker .lf-subtype-pill').forEach(p => p.classList.remove('selected'));
-      btn.classList.add('selected');
-      document.getElementById('subCatValue').value = value;
-    }
-
-    function handleUnitChange() {
-      const unit = document.getElementById('plotAreaUnit').value;
-      const bighaBlock = document.getElementById('bighaSubfields');
-      if (unit === 'bigha') {
-        bighaBlock.style.display = 'block';
-      } else {
-        bighaBlock.style.display = 'none';
-        const k = document.getElementById('kathaInput');
-        const l = document.getElementById('lechaInput');
-        if (k) k.value = '';
-        if (l) l.value = '';
-      }
-    }
-
-    function handleAreaInput() { updateProgress(); }
-
-    // Wire the inline state/district selects inside the vacant-plot fields
-    // Called after selectSubtype renders the fields
-    function wireVacantPlotLocation() {
-      const stSel = document.getElementById('stateSelectVP');
-      const distSel = document.getElementById('districtSelectVP');
-      if (!stSel || !distSel) return;
-
-      // Populate states
-      const states = Object.keys(INDIA_DISTRICTS).sort();
-      stSel.innerHTML = '<option value="">Select state</option>';
-      states.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s; opt.textContent = s;
-        stSel.appendChild(opt);
-      });
-
-      // Wire change
-      stSel.addEventListener('change', () => {
-        const state = stSel.value;
-        distSel.innerHTML = '<option value="">Select district</option>';
-        if (state && INDIA_DISTRICTS[state]) {
-          INDIA_DISTRICTS[state].forEach(d => {
-            const opt = document.createElement('option');
-            opt.value = d; opt.textContent = d;
-            distSel.appendChild(opt);
-          });
-          distSel.disabled = false;
-        } else {
-          distSel.disabled = true;
-        }
-      });
-    }
-
     function selectSubtype(btn, sub) {
+      // Update UI
       document.querySelectorAll('.lf-subtype-pill').forEach(p => p.classList.remove('selected'));
       btn.classList.add('selected');
-      const cfg = SUBTYPE_CONFIG[sub];
-      if (!cfg) return;
-      document.getElementById('subtypeIcon').textContent = cfg.icon;
+      
+      // Update section header
+      const config = SUBTYPE_CONFIG[sub];
+      document.getElementById('subtypeIcon').textContent = config.icon;
       document.getElementById('subtypeSectionTitle').textContent = 'Additional Details';
-      document.getElementById('subtypeTag').textContent = cfg.label;
-      document.getElementById('subtypeFields').innerHTML = cfg.fields;
+      document.getElementById('subtypeTag').textContent = config.label;
+      
+      // Show form and subtype fields
       document.getElementById('listingForm').style.display = 'block';
+      document.getElementById('subtypeSection').style.display = 'block';
+      document.getElementById('subtypeFields').innerHTML = config.fields;
+      
+      // Scroll to form
       document.getElementById('listingForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
       initUploadZones();
       updateProgress();
-      // For vacant-plot, all fields are self-contained inside subtypeFields
-      // Hide the shared Basic Info / Area / Pricing / Media sections
-      const sharedSections = document.querySelectorAll('.lf-section-shared');
-      sharedSections.forEach(s => {
-        s.style.display = sub === 'vacant-plot' ? 'none' : '';
-      });
-      // Wire inline location selects for vacant-plot
-      if (sub === 'vacant-plot') wireVacantPlotLocation();
     }
 
     function resetForm() {
       document.getElementById('listingForm').style.display = 'none';
       document.querySelectorAll('.lf-subtype-pill').forEach(p => p.classList.remove('selected'));
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
