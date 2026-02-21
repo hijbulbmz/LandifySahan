@@ -57,7 +57,7 @@
       <div class="lf-req-note">Fields marked <span>*</span> are required.</div>
 
       <!-- BASIC INFO -->
-      <div class="lf-section">
+      <div class="form-section basic-info">
         <div class="lf-section-head">
           <div class="lf-section-icon">📌</div>
           <div class="lf-section-title">Basic Information</div>
@@ -68,31 +68,38 @@
           </svg>
         </div>
         <div class="lf-section-body">
-          <div class="lf-field full">
-            <label class="lf-label">Property Title <span class="req">*</span> <span class="hint">e.g. "5-Acre Fertile
-                Farmland with River Access"</span></label>
-            <input class="lf-input" type="text" name="title" placeholder="Descriptive title for your agricultural land"
-              required>
+          <div class="form-group">
+            <label class="lf-label">Property Title <span class="req">*</span></label>
+            <input class="lf-input" type="text" name="title" placeholder="Enter a descriptive title for your agricultural land" required>
           </div>
-          <div class="lf-field">
+
+          <div class="form-group">
             <label class="lf-label">State <span class="req">*</span></label>
             <select class="lf-select" id="stateSelect" name="state" required>
               <option value="">Select state</option>
             </select>
           </div>
-          <div class="lf-field">
+
+          <div class="form-group">
             <label class="lf-label">District <span class="req">*</span></label>
             <select class="lf-select" id="districtSelect" name="district" disabled required>
               <option value="">Select district first</option>
             </select>
           </div>
-          <div class="lf-field">
-            <label class="lf-label">Locality / Village / Taluka <span class="req">*</span></label>
+
+          <div class="form-group">
+            <label class="lf-label">Locality <span class="req">*</span></label>
             <input class="lf-input" type="text" name="locality" placeholder="e.g. Kondagaon, Nashik Taluka" required>
           </div>
-          <div class="lf-field">
-            <label class="lf-label">Google Maps Link</label>
+
+          <div class="form-group">
+            <label class="lf-label">Google Map Link</label>
             <input class="lf-input" type="url" name="location_link" placeholder="Paste maps.google.com/… link">
+          </div>
+
+          <div class="form-group">
+            <label class="lf-label">Description <span class="req">*</span></label>
+            <textarea class="lf-textarea" name="description" placeholder="Describe your agricultural land in detail (minimum 30 characters)" required minlength="30" style="min-height: 120px;"></textarea>
           </div>
         </div>
       </div>
