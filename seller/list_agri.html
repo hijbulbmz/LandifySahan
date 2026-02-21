@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Agricultural Property — Landify</title>
+  <link rel="stylesheet" href="../assets/css/listing.css">
+</head>
+
+<body class="cat-agri">
+
+  <header class="lf-header">
+    <a href="../index.html" class="lf-logo">Landify<span>.</span></a>
+    <a href="../pages/dashboard.html" class="lf-header-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+      Back to Dashboard
+    </a>
+  </header>
+
+  <div class="lf-hero">
+    <div class="lf-hero-eyebrow">🌾 Agricultural Property</div>
+    <h1>List Your Agricultural<br>Land for Sale</h1>
+    <p>Farmland, plantations, orchards and agri plots — select your sub-type and submit for admin review.</p>
+  </div>
+
+  <div style="max-width:860px;margin:0 auto;padding:0 2rem;">
+    <div class="lf-progress-bar">
+      <div class="lf-progress-fill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="lf-body">
+
+    <div style="margin-bottom:1.75rem;">
+      <div
+        style="font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">
+        Step 1 — Select Sub-Type</div>
+      <div class="lf-subtype-grid" id="subtypePicker">
+        <button class="lf-subtype-pill" onclick="selectSubtype(this,'farmland')">🌾 Farmland (Basic)</button>
+        <button class="lf-subtype-pill" onclick="selectSubtype(this,'plantation')">🌳 Plantation / Orchard</button>
+        <button class="lf-subtype-pill" onclick="selectSubtype(this,'farmhouse')">🏡 Farmhouse + Land</button>
+        <button class="lf-subtype-pill" onclick="selectSubtype(this,'agri-plot')">📐 Agricultural Plot</button>
+        <button class="lf-subtype-pill" onclick="selectSubtype(this,'mixed-agri')">🌿 Mixed-Use Agri</button>
+      </div>
+    </div>
+
+    <form id="listingForm" style="display:none;">
+
+      <div class="lf-admin-notice">
+        <div class="lf-admin-notice-icon">🔒</div>
+        <div class="lf-admin-notice-text"><strong>Admin-Verified Listing:</strong> Agricultural land documents (land
+          records, patta, 7/12 extract) are verified by our team before the listing goes live.</div>
+      </div>
+      <div class="lf-req-note">Fields marked <span>*</span> are required.</div>
+
+      <!-- BASIC INFO -->
+      <div class="lf-section">
+        <div class="lf-section-head">
+          <div class="lf-section-icon">📌</div>
+          <div class="lf-section-title">Basic Information</div>
+          <span class="lf-section-badge">Required</span>
+          <svg class="lf-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="lf-section-body">
+          <div class="lf-field full">
+            <label class="lf-label">Property Title <span class="req">*</span> <span class="hint">e.g. "5-Acre Fertile
+                Farmland with River Access"</span></label>
+            <input class="lf-input" type="text" name="title" placeholder="Descriptive title for your agricultural land"
+              required>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">State <span class="req">*</span></label>
+            <select class="lf-select" id="stateSelect" name="state" required>
+              <option value="">Select state</option>
+            </select>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">District <span class="req">*</span></label>
+            <select class="lf-select" id="districtSelect" name="district" disabled required>
+              <option value="">Select district first</option>
+            </select>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">Locality / Village / Taluka <span class="req">*</span></label>
+            <input class="lf-input" type="text" name="locality" placeholder="e.g. Kondagaon, Nashik Taluka" required>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">Google Maps Link</label>
+            <input class="lf-input" type="url" name="location_link" placeholder="Paste maps.google.com/… link">
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBTYPE SECTION -->
+      <div class="lf-section" id="subtypeSection">
+        <div class="lf-section-head">
+          <div class="lf-section-icon" id="subtypeIcon">🌾</div>
+          <div class="lf-section-title" id="subtypeSectionTitle">Additional Details</div>
+          <span class="lf-section-badge" id="subtypeTag">Agricultural</span>
+          <svg class="lf-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="lf-section-body" id="subtypeFields"></div>
+      </div>
+
+      <!-- AREA -->
+      <div class="lf-section">
+        <div class="lf-section-head">
+          <div class="lf-section-icon">📐</div>
+          <div class="lf-section-title">Land Details</div>
+          <span class="lf-section-badge">Required</span>
+          <svg class="lf-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="lf-section-body">
+          <div class="lf-field">
+            <label class="lf-label">Total Land Area <span class="req">*</span></label>
+            <div class="lf-input-unit">
+              <input class="lf-input" type="number" name="total_area" placeholder="0" min="0" required>
+              <select class="lf-unit-select" name="area_unit">
+                <option>Acres</option>
+                <option>Bigha</option>
+                <option>Hectares</option>
+                <option>Guntha</option>
+                <option>sq ft</option>
+              </select>
+            </div>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">Road Access</label>
+            <select class="lf-select" name="road_access">
+              <option value="">Select</option>
+              <option>Tar Road</option>
+              <option>Kutcha Road</option>
+              <option>Highway Adjacent</option>
+              <option>No Road — Interior</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div class="lf-section">
+        <div class="lf-section-head">
+          <div class="lf-section-icon">💰</div>
+          <div class="lf-section-title">Pricing</div>
+          <span class="lf-section-badge">Required</span>
+          <svg class="lf-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="lf-section-body">
+          <div class="lf-field">
+            <label class="lf-label">Expected Price (₹) <span class="req">*</span></label>
+            <div class="lf-input-unit">
+              <span class="lf-unit-tag">₹</span>
+              <input class="lf-input" type="number" name="price" placeholder="0" min="0" required>
+            </div>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">Price Negotiable</label>
+            <div class="lf-toggle">
+              <input type="radio" name="negotiable" id="neg_y" value="Yes"><label for="neg_y">Yes</label>
+              <input type="radio" name="negotiable" id="neg_n" value="No" checked><label for="neg_n">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDIA -->
+      <div class="lf-section">
+        <div class="lf-section-head">
+          <div class="lf-section-icon">🖼</div>
+          <div class="lf-section-title">Photos & Land Documents</div>
+          <span class="lf-section-badge">Min 3 photos</span>
+          <svg class="lf-section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+        <div class="lf-section-body single-col">
+          <div class="lf-field">
+            <label class="lf-label">Land Photos <span class="req">*</span> <span class="hint">Minimum 3 clear photos of
+                the land</span></label>
+            <div class="lf-upload">
+              <input type="file" name="images" accept="image/*" multiple>
+              <div class="lf-upload-icon">📷</div>
+              <div class="lf-upload-title">Click or drag to upload photos</div>
+              <div class="lf-upload-sub">JPG, PNG, WEBP — Min 3 photos required</div>
+              <div class="lf-upload-preview"></div>
+            </div>
+          </div>
+          <div class="lf-field">
+            <label class="lf-label">Land Documents <span class="hint">7/12 extract, Patta, Survey map, Title
+                deed</span></label>
+            <div class="lf-upload">
+              <input type="file" name="documents" accept=".pdf,.jpg,.png,.docx" multiple>
+              <div class="lf-upload-icon">📋</div>
+              <div class="lf-upload-title">Click or drag to upload documents</div>
+              <div class="lf-upload-sub">PDF, JPG, PNG — Land records required for verification</div>
+              <div class="lf-upload-preview"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lf-actions">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <button type="button" class="lf-btn-back" onclick="resetForm()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              style="width:14px;height:14px;">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Change Type
+          </button>
+          <button type="button" class="lf-save-draft">Save draft</button>
+        </div>
+        <button type="submit" class="lf-btn-submit" id="submitBtn">
+          Submit for Approval
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../assets/js/listing.js"></script>
+  <script>
+    const SUBTYPE_CONFIG = {
+      'farmland': {
+        label: 'Farmland', icon: '🌾',
+        fields: `
+      <div class="lf-field"><label class="lf-label">Land Type <span class="req">*</span></label><select class="lf-select" name="land_type" required><option value="">Select</option><option>Wet Land</option><option>Dry Land</option><option>Garden Land</option></select></div>
+      <div class="lf-field"><label class="lf-label">Soil Type</label><select class="lf-select" name="soil_type"><option value="">Select soil type</option><option>Black Cotton Soil</option><option>Red Laterite</option><option>Alluvial</option><option>Sandy Loam</option><option>Clay</option><option>Mixed</option></select></div>
+      <div class="lf-field"><label class="lf-label">Water Source</label><select class="lf-select" name="water_source"><option value="">Select</option><option>River / Canal</option><option>Bore Well</option><option>Open Well</option><option>Rain Fed</option><option>Tank / Lake</option></select></div>
+      <div class="lf-field"><label class="lf-label">Electricity Available</label><div class="lf-toggle"><input type="radio" name="electricity" id="el_y" value="Yes"><label for="el_y">Yes</label><input type="radio" name="electricity" id="el_n" value="No" checked><label for="el_n">No</label></div></div>
+      <div class="lf-field full"><label class="lf-label">Additional Details</label><textarea class="lf-textarea" name="additional_details" placeholder="Describe current crops, soil quality, water availability, any existing infrastructure..."></textarea></div>
+    `
+      },
+      'plantation': {
+        label: 'Plantation / Orchard', icon: '🌳',
+        fields: `
+      <div class="lf-field"><label class="lf-label">Plantation Type <span class="req">*</span></label><select class="lf-select" name="plantation_type" required><option value="">Select</option><option>Tea</option><option>Coffee</option><option>Coconut</option><option>Mango</option><option>Banana</option><option>Cashew</option><option>Rubber</option><option>Sugarcane</option><option>Spices</option><option>Mixed Fruits</option><option>Other</option></select></div>
+      <div class="lf-field"><label class="lf-label">Crop Age (years)</label><input class="lf-input" type="number" name="crop_age" min="0" placeholder="e.g. 8"></div>
+      <div class="lf-field"><label class="lf-label">Irrigation System</label><select class="lf-select" name="irrigation"><option value="">Select</option><option>Drip Irrigation</option><option>Sprinkler</option><option>Flood Irrigation</option><option>Rain Fed</option></select></div>
+      <div class="lf-field full"><label class="lf-label">Yield Details <span class="hint">(optional)</span></label><input class="lf-input" type="text" name="yield_details" placeholder="e.g. 5 tonnes/acre annual yield"></div>
+    `
+      },
+      'farmhouse': {
+        label: 'Farmhouse + Land', icon: '🏡',
+        fields: `
+      <div class="lf-field"><label class="lf-label">Total Land Area <span class="req">*</span></label><div class="lf-input-unit"><input class="lf-input" type="number" name="total_land_area" min="0" placeholder="0" required><select class="lf-unit-select" name="total_land_unit"><option>Acres</option><option>Bigha</option><option>Hectares</option><option>Guntha</option><option>sq ft</option></select></div></div>
+      <div class="lf-field"><label class="lf-label">Farmhouse Built-up Area (sq ft) <span class="req">*</span></label><input class="lf-input" type="number" name="farmhouse_area" min="0" placeholder="0" required></div>
+      <div class="lf-field"><label class="lf-label">Number of Floors <span class="hint">of the farmhouse</span></label><input class="lf-input" type="number" name="farmhouse_floors" min="1" placeholder="e.g. 2"></div>
+      <div class="lf-field"><label class="lf-label">Farmhouse Facing</label><select class="lf-select" name="farmhouse_facing"><option value="">Select facing</option><option>East</option><option>West</option><option>North</option><option>South</option><option>North-East</option><option>North-West</option><option>South-East</option><option>South-West</option></select></div>
+      <div class="lf-field"><label class="lf-label">Number of Rooms</label><input class="lf-input" type="number" name="rooms" min="0" placeholder="e.g. 4"></div>
+      <div class="lf-field"><label class="lf-label">Legal Permission Status</label><select class="lf-select" name="legal_permission"><option value="">Select</option><option>Full Legal — All Docs Clear</option><option>Pending NOC</option><option>Under Review</option></select></div>
+      <div class="lf-field"><label class="lf-label">Electricity Connection</label><div class="lf-toggle"><input type="radio" name="electricity" id="elec_y" value="Yes"><label for="elec_y">Available</label><input type="radio" name="electricity" id="elec_n" value="No" checked><label for="elec_n">Not Connected</label></div></div>
+      <div class="lf-field"><label class="lf-label">Water Supply</label><div class="lf-toggle"><input type="radio" name="water" id="water_y" value="Yes"><label for="water_y">Available</label><input type="radio" name="water" id="water_n" value="No" checked><label for="water_n">Not Connected</label></div></div>
+      <div class="lf-field full"><label class="lf-label">Describe the Land <span class="hint">Crops, soil, irrigation, boundaries</span></label><textarea class="lf-textarea" name="land_description" placeholder="Describe the agricultural land attached to the farmhouse..."></textarea></div>
+    `
+      },
+      'agri-plot': {
+        label: 'Agricultural Plot', icon: '📐',
+        fields: `
+      <div class="lf-field"><label class="lf-label">Survey Number <span class="req">*</span></label><input class="lf-input" type="text" name="survey_number" placeholder="e.g. 45/2A" required></div>
+      <div class="lf-field"><label class="lf-label">Water Availability</label><select class="lf-select" name="water_availability"><option value="">Select</option><option>Bore Well</option><option>Open Well</option><option>Canal</option><option>Rain Fed Only</option></select></div>
+      <div class="lf-field"><label class="lf-label">Conversion Allowed (for non-agri use)</label><div class="lf-toggle"><input type="radio" name="conversion_allowed" id="ca_y" value="Yes"><label for="ca_y">Yes</label><input type="radio" name="conversion_allowed" id="ca_n" value="No" checked><label for="ca_n">No</label></div></div>
+      <div class="lf-field"><label class="lf-label">Fencing</label><div class="lf-toggle"><input type="radio" name="fencing" id="fn_y" value="Yes"><label for="fn_y">Yes</label><input type="radio" name="fencing" id="fn_n" value="No" checked><label for="fn_n">No</label></div></div>
+    `
+      },
+      'mixed-agri': {
+        label: 'Mixed-Use Agricultural', icon: '🌿',
+        fields: `
+      <div class="lf-field full"><label class="lf-label">Current Agricultural Use <span class="req">*</span></label><input class="lf-input" type="text" name="current_use" placeholder="e.g. Paddy farming + Poultry shed + Fishpond" required></div>
+      <div class="lf-field"><label class="lf-label">Conversion Potential</label><select class="lf-select" name="conversion_potential"><option value="">Select</option><option>High — Near Development</option><option>Medium</option><option>Low — Pure Agricultural</option></select></div>
+      <div class="lf-field"><label class="lf-label">Nearby Development</label><select class="lf-select" name="nearby_development"><option value="">Select</option><option>Industrial Zone</option><option>Residential Layout</option><option>Highway Project</option><option>None</option></select></div>
+      <div class="lf-field"><label class="lf-label">Highway Proximity (km)</label><input class="lf-input" type="number" name="highway_proximity" min="0" placeholder="e.g. 3"></div>
+      <div class="lf-field full"><label class="lf-label">Additional Information</label><textarea class="lf-textarea" name="additional_info" placeholder="Describe the mixed-use setup, any existing infrastructure, potential uses..."></textarea></div>
+    `
+      }
+    };
+
+    function selectSubtype(btn, sub) {
+      document.querySelectorAll('.lf-subtype-pill').forEach(p => p.classList.remove('selected'));
+      btn.classList.add('selected');
+      const cfg = SUBTYPE_CONFIG[sub];
+      if (!cfg) return;
+      document.getElementById('subtypeIcon').textContent = cfg.icon;
+      document.getElementById('subtypeSectionTitle').textContent = 'Additional Details';
+      document.getElementById('subtypeTag').textContent = cfg.label;
+      document.getElementById('subtypeFields').innerHTML = cfg.fields;
+      document.getElementById('listingForm').style.display = 'block';
+      document.getElementById('listingForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      initUploadZones();
+      updateProgress();
+    }
+
+    function resetForm() {
+      document.getElementById('listingForm').style.display = 'none';
+      document.querySelectorAll('.lf-subtype-pill').forEach(p => p.classList.remove('selected'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+
+</html>
