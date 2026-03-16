@@ -1,0 +1,463 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.landify:landify-backend >---------------------
+[INFO] Building landify-backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ landify-backend ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ landify-backend ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 32 source files with javac [debug release 17] to target\classes
+[INFO] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java: C:\xampp\htdocs\Landify\Landify_Backend\src\main\java\com\landify\security\JwtUtil.java uses or overrides a deprecated API.
+[INFO] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/specification/PropertySpecification.java:[3,26] cannot access com.landify.entity.Property
+  bad source file: C:\xampp\htdocs\Landify\Landify_Backend\src\main\java\com\landify\entity\Property.java
+    file does not contain class com.landify.entity.Property
+    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[27,13] cannot find symbol
+  symbol:   class PropertyCategory
+  location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[61,13] cannot find symbol
+  symbol:   class PropertyStatus
+  location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[65,13] cannot find symbol
+  symbol:   class User
+  location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[13,8] duplicate class: Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/specification/PropertySpecification.java:[13,33] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.specification.PropertySpecification
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[14,12] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[35,49] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[49,47] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[78,52] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[10,59] cannot find symbol
+  symbol: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[10,101] cannot find symbol
+  symbol: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[127,36] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[11,10] cannot find symbol
+  symbol:   class Property
+  location: interface com.landify.repository.PropertyRepository
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[12,10] cannot find symbol
+  symbol:   class Property
+  location: interface com.landify.repository.PropertyRepository
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[61,37] cannot find symbol
+  symbol:   variable PropertyStatus
+  location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[56,13] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[58,13] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[60,13] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[62,13] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[64,13] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/response/ApiResponse.java:[25,27] cannot find symbol
+  symbol:   method <T>builder()
+  location: class com.landify.common.response.ApiResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/response/ApiResponse.java:[34,27] cannot find symbol
+  symbol:   method <T>builder()
+  location: class com.landify.common.response.ApiResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/exception/GlobalExceptionHandler.java:[30,28] cannot find symbol
+  symbol:   method builder()
+  location: class com.landify.common.response.ApiResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/exception/GlobalExceptionHandler.java:[74,9] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.common.exception.GlobalExceptionHandler
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/exception/GlobalExceptionHandler.java:[83,9] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.common.exception.GlobalExceptionHandler
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[15,16] cannot find symbol
+  symbol:   variable Property
+  location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[16,27] cannot find symbol
+  symbol:   method getTitle()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[17,33] cannot find symbol
+  symbol:   method getDescription()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[18,30] cannot find symbol
+  symbol:   method getCategory()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[19,29] cannot find symbol
+  symbol:   method getSubtype()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[20,27] cannot find symbol
+  symbol:   method getState()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[21,30] cannot find symbol
+  symbol:   method getDistrict()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[22,30] cannot find symbol
+  symbol:   method getLocality()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[23,31] cannot find symbol
+  symbol:   method getTotalArea()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[23,89] cannot find symbol
+  symbol:   method getTotalArea()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[24,30] cannot find symbol
+  symbol:   method getAreaUnit()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[25,27] cannot find symbol
+  symbol:   method getPrice()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[25,81] cannot find symbol
+  symbol:   method getPrice()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[26,37] cannot find symbol
+  symbol:   method isPriceNegotiable()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[27,28] cannot find symbol
+  symbol:   method getStatus()
+  location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[36,39] cannot find symbol
+  symbol:   method builder()
+  location: class com.landify.dto.property.PropertySummaryResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[55,38] cannot find symbol
+  symbol:   method builder()
+  location: class com.landify.dto.property.PropertyDetailResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[79,37] cannot find symbol
+  symbol:   method builder()
+  location: class com.landify.dto.property.OwnerPropertyResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/exception/GlobalExceptionHandler.java:[25,17] cannot find symbol
+  symbol:   method setErrors(java.util.Map<java.lang.String,java.lang.String>)
+  location: variable response of type com.landify.common.response.ApiResponse<java.lang.Object>
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[49,9] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[50,9] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[56,9] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[65,34] cannot find symbol
+  symbol:   method getTitle()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[66,40] cannot find symbol
+  symbol:   method getDescription()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[67,37] cannot find symbol
+  symbol:   method getCategory()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[68,36] cannot find symbol
+  symbol:   method getSubtype()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[69,34] cannot find symbol
+  symbol:   method getState()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[70,37] cannot find symbol
+  symbol:   method getDistrict()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[71,37] cannot find symbol
+  symbol:   method getLocality()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[72,38] cannot find symbol
+  symbol:   method getTotalArea()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[72,100] cannot find symbol
+  symbol:   method getTotalArea()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[73,37] cannot find symbol
+  symbol:   method getAreaUnit()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[74,34] cannot find symbol
+  symbol:   method getPrice()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[74,92] cannot find symbol
+  symbol:   method getPrice()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[75,44] cannot find symbol
+  symbol:   method isPriceNegotiable()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[76,35] cannot find symbol
+  symbol:   method getStatus()
+  location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[78,9] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[83,9] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[94,9] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[110,14] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[112,37] incompatible types: cannot infer type arguments for com.landify.dto.PaginatedResponse<>
+    reason: inference variable T has incompatible bounds
+      equality constraints: com.landify.dto.property.OwnerPropertyResponse,T
+      lower bounds: java.lang.Object
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[130,13] cannot find symbol
+  symbol:   variable log
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[148,23] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[152,14] cannot find symbol
+  symbol:   class Property
+  location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[154,37] incompatible types: cannot infer type arguments for com.landify.dto.PaginatedResponse<>
+    reason: inference variable T has incompatible bounds
+      equality constraints: com.landify.dto.property.PropertySummaryResponse,T
+      lower bounds: java.lang.Object
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[10,8] types org.springframework.data.jpa.repository.JpaSpecificationExecutor<Property> and org.springframework.data.repository.CrudRepository<Property,java.lang.Long> are incompatible;
+  both define delete(Property), but with unrelated return types
+[INFO] 72 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.059 s
+[INFO] Finished at: 2026-02-27T03:05:21+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project landify-backend: Compilation failure: Compilation failure: 
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/specification/PropertySpecification.java:[3,26] cannot access com.landify.entity.Property
+[ERROR]   bad source file: C:\xampp\htdocs\Landify\Landify_Backend\src\main\java\com\landify\entity\Property.java
+[ERROR]     file does not contain class com.landify.entity.Property
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[27,13] cannot find symbol
+[ERROR]   symbol:   class PropertyCategory
+[ERROR]   location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[61,13] cannot find symbol
+[ERROR]   symbol:   class PropertyStatus
+[ERROR]   location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[65,13] cannot find symbol
+[ERROR]   symbol:   class User
+[ERROR]   location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[13,8] duplicate class: Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/specification/PropertySpecification.java:[13,33] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.specification.PropertySpecification
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[14,12] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[35,49] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[49,47] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[78,52] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[10,59] cannot find symbol
+[ERROR]   symbol: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[10,101] cannot find symbol
+[ERROR]   symbol: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[127,36] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[11,10] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: interface com.landify.repository.PropertyRepository
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[12,10] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: interface com.landify.repository.PropertyRepository
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/entity/Property.java:[61,37] cannot find symbol
+[ERROR]   symbol:   variable PropertyStatus
+[ERROR]   location: class Property
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[56,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[58,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[60,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[62,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/security/JwtUtil.java:[64,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.security.JwtUtil
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/response/ApiResponse.java:[25,27] cannot find symbol
+[ERROR]   symbol:   method <T>builder()
+[ERROR]   location: class com.landify.common.response.ApiResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/response/ApiResponse.java:[34,27] cannot find symbol
+[ERROR]   symbol:   method <T>builder()
+[ERROR]   location: class com.landify.common.response.ApiResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/exception/GlobalExceptionHandler.java:[30,28] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.landify.common.response.ApiResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/exception/GlobalExceptionHandler.java:[74,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.common.exception.GlobalExceptionHandler
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/common/exception/GlobalExceptionHandler.java:[83,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.common.exception.GlobalExceptionHandler
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[15,16] cannot find symbol
+[ERROR]   symbol:   variable Property
+[ERROR]   location: class com.landify.mapper.PropertyMapper
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[16,27] cannot find symbol
+[ERROR]   symbol:   method getTitle()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[17,33] cannot find symbol
+[ERROR]   symbol:   method getDescription()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[18,30] cannot find symbol
+[ERROR]   symbol:   method getCategory()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[19,29] cannot find symbol
+[ERROR]   symbol:   method getSubtype()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[20,27] cannot find symbol
+[ERROR]   symbol:   method getState()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[21,30] cannot find symbol
+[ERROR]   symbol:   method getDistrict()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[22,30] cannot find symbol
+[ERROR]   symbol:   method getLocality()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[23,31] cannot find symbol
+[ERROR]   symbol:   method getTotalArea()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[23,89] cannot find symbol
+[ERROR]   symbol:   method getTotalArea()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[24,30] cannot find symbol
+[ERROR]   symbol:   method getAreaUnit()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[25,27] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[25,81] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[26,37] cannot find symbol
+[ERROR]   symbol:   method isPriceNegotiable()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[27,28] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable dto of type com.landify.dto.property.PropertyCreateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[36,39] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.landify.dto.property.PropertySummaryResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[55,38] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.landify.dto.property.PropertyDetailResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/mapper/PropertyMapper.java:[79,37] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.landify.dto.property.OwnerPropertyResponse
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/exception/GlobalExceptionHandler.java:[25,17] cannot find symbol
+[ERROR]   symbol:   method setErrors(java.util.Map<java.lang.String,java.lang.String>)
+[ERROR]   location: variable response of type com.landify.common.response.ApiResponse<java.lang.Object>
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[49,9] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[50,9] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[56,9] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[65,34] cannot find symbol
+[ERROR]   symbol:   method getTitle()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[66,40] cannot find symbol
+[ERROR]   symbol:   method getDescription()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[67,37] cannot find symbol
+[ERROR]   symbol:   method getCategory()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[68,36] cannot find symbol
+[ERROR]   symbol:   method getSubtype()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[69,34] cannot find symbol
+[ERROR]   symbol:   method getState()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[70,37] cannot find symbol
+[ERROR]   symbol:   method getDistrict()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[71,37] cannot find symbol
+[ERROR]   symbol:   method getLocality()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[72,38] cannot find symbol
+[ERROR]   symbol:   method getTotalArea()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[72,100] cannot find symbol
+[ERROR]   symbol:   method getTotalArea()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[73,37] cannot find symbol
+[ERROR]   symbol:   method getAreaUnit()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[74,34] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[74,92] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[75,44] cannot find symbol
+[ERROR]   symbol:   method isPriceNegotiable()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[76,35] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable request of type com.landify.dto.property.PropertyUpdateRequest
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[78,9] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[83,9] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[94,9] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[110,14] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[112,37] incompatible types: cannot infer type arguments for com.landify.dto.PaginatedResponse<>
+[ERROR]     reason: inference variable T has incompatible bounds
+[ERROR]       equality constraints: com.landify.dto.property.OwnerPropertyResponse,T
+[ERROR]       lower bounds: java.lang.Object
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[130,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[148,23] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[152,14] cannot find symbol
+[ERROR]   symbol:   class Property
+[ERROR]   location: class com.landify.service.PropertyService
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/service/PropertyService.java:[154,37] incompatible types: cannot infer type arguments for com.landify.dto.PaginatedResponse<>
+[ERROR]     reason: inference variable T has incompatible bounds
+[ERROR]       equality constraints: com.landify.dto.property.PropertySummaryResponse,T
+[ERROR]       lower bounds: java.lang.Object
+[ERROR] /C:/xampp/htdocs/Landify/Landify_Backend/src/main/java/com/landify/repository/PropertyRepository.java:[10,8] types org.springframework.data.jpa.repository.JpaSpecificationExecutor<Property> and org.springframework.data.repository.CrudRepository<Property,java.lang.Long> are incompatible;
+[ERROR]   both define delete(Property), but with unrelated return types
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

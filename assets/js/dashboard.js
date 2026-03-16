@@ -6,7 +6,7 @@
 (function initDashboard() {
   'use strict';
 
-  /* ── Demo listings — swap with real API fetch() ── */
+  /* ── Demo listings — frontend-only static data ── */
   const LISTINGS = [
     {
       id: 'p001', type: 'res', subtype: 'Apartment',
@@ -334,7 +334,7 @@
     mSubmit.classList.add('loading');
     mSubmit.disabled = true;
 
-    /* Simulated API — replace with real fetch() to Spring Boot */
+    /* Frontend-only simulation — no backend API calls */
     setTimeout(() => {
       if (!_editId) {
         const titleEl = document.getElementById('mf-title');

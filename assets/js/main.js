@@ -3,14 +3,9 @@
    All interactivity + working search filter
    ================================================================ */
 
-/* ----------------------------------------------------------------
-   CONFIG — swap BASE_URL for your real API endpoint
-   ---------------------------------------------------------------- */
-const API = {
-  BASE_URL: '/api/v1',
-  LISTINGS: '/listings',
-  SEARCH:   '/listings/search',
-};
+/* ================================================================
+   FRONTEND ONLY — No backend integration
+   ================================================================ */
 
 /* ----------------------------------------------------------------
    NAVBAR — scroll effect + hamburger
@@ -422,61 +417,5 @@ function checkEmpty(grid) {
 
 
 /* ================================================================
-   BACKEND INTEGRATION HOOKS
-   Ready to wire to your real API — uncomment when backend is live
+   FRONTEND ONLY — Static content display
    ================================================================ */
-
-async function fetchListings(params = {}) {
-  const query = new URLSearchParams(params);
-  const res   = await fetch(`${API.BASE_URL}${API.LISTINGS}?${query}`);
-  if (!res.ok) throw new Error(`API error ${res.status}`);
-  return res.json();
-}
-
-function renderCards(grid, listings) {
-  grid.querySelectorAll('.prop-card').forEach(c => c.remove());
-  if (!listings || listings.length === 0) { checkEmpty(grid); return; }
-  listings.forEach(listing => grid.appendChild(buildCard(listing)));
-}
-
-function buildCard(listing) {
-  const card = document.createElement('article');
-  card.className = 'prop-card reveal';
-  card.dataset.id      = listing.id;
-  card.dataset.type    = listing.category;
-  card.dataset.subtype = listing.subtype;
-
-  card.innerHTML = `
-    <div class="prop-card__img">
-      <img src="${esc(listing.image)}" alt="${esc(listing.title)}" loading="lazy">
-      <span class="prop-badge prop-badge--${esc(listing.category)}">${categoryLabel(listing.category)}</span>
-      <span class="prop-subtype-badge">${esc(listing.subtypeLabel)}</span>
-      ${listing.verified ? '<span class="badge-verified">✓ Verified</span>' : ''}
-    </div>
-    <div class="prop-card__body">
-      <div class="prop-card__price">${esc(listing.price)}<span>${esc(listing.priceLabel || '')}</span></div>
-      <div class="prop-card__title">${esc(listing.title)}</div>
-      <div class="prop-card__location">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        ${esc(listing.location)}
-      </div>
-      <div class="prop-card__meta">
-        ${(listing.chips || []).map(c => `<span class="meta-chip">${esc(c)}</span>`).join('')}
-      </div>
-    </div>`;
-
-  card.addEventListener('click', () => {
-    // window.location.href = `/property/${listing.id}`;
-    console.log('[Landify] Card clicked:', listing.id);
-  });
-
-  return card;
-}
-
-function categoryLabel(cat) {
-  return { residential: 'Residential', commercial: 'Commercial', agri: 'Agricultural', undeveloped: 'Land' }[cat] || cat;
-}
-
-function esc(str) {
-  return String(str ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
